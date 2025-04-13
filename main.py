@@ -160,7 +160,7 @@ async def get_messages_with_files(user_id: str, thread_id: str):
             return {"message": "No messages found in this thread."}
 
         messages_with_files = [
-            {"message_id": message_time, "file_link": f"https://api.orbexai.com/get-file/{image_id}"}
+            {"message_id": message_time, "file_link": f"https://api.your-site.com/get-file/{image_id}"}
             for _, _, image_id, message_time in messages if image_id
         ]
 
@@ -681,7 +681,7 @@ async def get_thread_messages(user_id: str, thread_id: str):
                 "role": role,
                 "content": content,
                 "hasImage": True if image_id else False,
-                "image_link": f"https://api.orbexai.com/get-file/{image_id}" if image_id else None,
+                "image_link": f"https://api.your-site.com/get-file/{image_id}" if image_id else None,
                 "reply_to": reply_to
             }
             for message_id, role, content, image_id, reply_to in messages
