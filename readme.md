@@ -59,6 +59,14 @@ uvicorn main:app --reload
 
 ## API Endpoints
 
+### Base URL
+
+The base URL for all API requests is:
+
+```
+https://api.your-site.com/
+```
+
 ### User & Thread Management
 
 - `GET /threads/{user_id}` - List user's conversation threads
